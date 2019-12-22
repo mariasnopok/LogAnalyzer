@@ -42,7 +42,7 @@ class LogAnalyzerTests(unittest.TestCase):
                 report_data = f.read()
         except Exception as error:
             print(error)
-        self.assertIn(dumps(data),report_data)
+        self.assertIn(dumps(data), report_data)
 
 
 if __name__ == '__main__':

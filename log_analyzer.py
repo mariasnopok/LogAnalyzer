@@ -116,7 +116,7 @@ def analyze_log(log):
             times_sum += time
             logs_count += 1
         total += 1
-    print(logs_count,total)
+    print(logs_count, total)
 
     if float(logs_count) / total < 0.7:
         logging.error("Слишком много строк лога невалидного формата")
@@ -150,7 +150,6 @@ def render_data(data):
 
 
 def report_data(report_data, report_file):
-
     save_string_to_file(render_data(report_data), report_file)
 
 
@@ -163,7 +162,7 @@ def parse_config(config_path):
 def main(config):
     last = get_last_logfile(config['LOG_DIR'])
     if last.file:
-        report_dir=config['REPORT_DIR']
+        report_dir = config['REPORT_DIR']
         if not os.path.exists(report_dir):
             os.mkdir(report_dir)
         report_file = os.path.join(report_dir, 'report-{}.html'.format(last.date.strftime("%Y.%m.%d")))
