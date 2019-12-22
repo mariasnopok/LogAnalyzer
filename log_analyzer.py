@@ -75,17 +75,17 @@ def is_file(file_path):
         return True
 
 
-def save_timestamp(string, f_name):
+def save_string_to_file(string, f_name):
     try:
-        with open(f_name, 'w') as fp:
-            fp.write(string)
+        with open(f_name, 'w') as f:
+            f.write(string)
     except Exception as error:
         logging.error("Ошибка записи {}".format(error))
 
 
 def update_timestamp_file(timestamp_file):
     timestamp = str(int(time.time()))
-    save_timestamp(timestamp, timestamp_file)
+    save_string_to_file(timestamp, timestamp_file)
     return timestamp
 
 
@@ -150,7 +150,8 @@ def render_data(data):
 
 
 def report_data(report_data, report_file):
-    save_timestamp(render_data(report_data), report_file)
+
+    save_string_to_file(render_data(report_data), report_file)
 
 
 def parse_config(config_path):
@@ -162,7 +163,10 @@ def parse_config(config_path):
 def main(config):
     last = get_last_logfile(config['LOG_DIR'])
     if last.file:
-        report_file = os.path.join(config['REPORT_DIR'], 'report-{}.html'.format(last.date.strftime("%Y.%m.%d")))
+        report_dir=config['REPORT_DIR']
+        if not os.path.exists(report_dir):
+            os.mkdir(report_dir)
+        report_file = os.path.join(report_dir, 'report-{}.html'.format(last.date.strftime("%Y.%m.%d")))
 
         if not os.path.exists(report_file):
             data = analyze_log(read_lines(last.file))

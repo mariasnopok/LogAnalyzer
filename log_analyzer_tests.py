@@ -38,8 +38,8 @@ class LogAnalyzerTests(unittest.TestCase):
         data = la.analyze_log(la.read_lines("./test_data/nginx-access-ui.log-20170703.txt"))
         la.report_data(data, report_file)
         try:
-            with open(report_file, 'r') as fp:
-                report_data = fp.read()
+            with open(report_file, 'r') as f:
+                report_data = f.read()
         except Exception as error:
             print(error)
         self.assertIn(dumps(data),report_data)
