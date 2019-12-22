@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>rbui log analysis report</title>
+  <meta name="description" content="rbui log analysis report">
+  <style type="text/css">
+    html, body {
+      background-color: black;
+    }
+    th {
+      text-align: center;
+      color: silver;
+      font-style: bold;
+      padding: 5px;
+      cursor: pointer;
+    }
+    table {
+      width: auto;
+      border-collapse: collapse;
+      margin: 1%;
+      color: silver;
+    }
+    td {
+      text-align: right;
+      font-size: 1.1em;
+      padding: 5px;
+    }
+    .report-table-body-cell-url {
+      text-align: left;
+      width: 20%;
+    }
+    .clipped {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow:hidden !important;
+      max-width: 700px;
+      word-wrap: break-word;
+      display:inline-block;
+    }
+    .url {
+      cursor: pointer;
+      color: #729FCF;
+    }
+    .alert {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <table border="1" class="report-table">
+  <thead>
+    <tr class="report-table-header-row">
+    </tr>
+  </thead>
+  <tbody class="report-table-body">
+  </tbody>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.tablesorter.min.js"></script> 
+  <script type="text/javascript">
+  !function($) {
+    var table = [{"url": "/api/v2/banner/3118447/statistic/conversion/?date_from=2007-01-01&date_to=2017-06-29", "count": 1, "count_perc": 0.033, "time_sum": 5.246, "time_perc": 0.51, "time_avg": 5.246, "time_max": 5.246, "time_med": 5.246}, {"url": "/api/v2/banner/25949683", "count": 1, "count_perc": 0.033, "time_sum": 0.863, "time_perc": 0.084, "time_avg": 0.863, "time_max": 0.863, "time_med": 0.863}, {"url": "/api/v2/banner/25949705", "count": 1, "count_perc": 0.033, "time_sum": 0.673, "time_perc": 0.065, "time_avg": 0.673, "time_max": 0.673, "time_med": 0.673}, {"url": "/api/v2/group/1240146/banners", "count": 1, "count_perc": 0.033, "time_sum": 0.643, "time_perc": 0.063, "time_avg": 0.643, "time_max": 0.643, "time_med": 0.643}, {"url": "/api/v2/banner/25020397", "count": 1, "count_perc": 0.033, "time_sum": 0.47, "time_perc": 0.046, "time_avg": 0.47, "time_max": 0.47, "time_med": 0.47}, {"url": "/api/v2/internal/revenue_share/service/276/partner/77624766/statistic/v2?date_from=2017-06-24&date_to=2017-06-30&date_type=day", "count": 1, "count_perc": 0.033, "time_sum": 0.329, "time_perc": 0.032, "time_avg": 0.329, "time_max": 0.329, "time_med": 0.329}, {"url": "/api/v2/banner/25187824", "count": 1, "count_perc": 0.033, "time_sum": 0.203, "time_perc": 0.02, "time_avg": 0.203, "time_max": 0.203, "time_med": 0.203}, {"url": "/api/v2/banner/5960595", "count": 1, "count_perc": 0.033, "time_sum": 0.147, "time_perc": 0.014, "time_avg": 0.147, "time_max": 0.147, "time_med": 0.147}, {"url": "/api/1/campaigns/?id=593209", "count": 1, "count_perc": 0.033, "time_sum": 0.144, "time_perc": 0.014, "time_avg": 0.144, "time_max": 0.144, "time_med": 0.144}, {"url": "/api/v2/internal/revenue_share/service/276/partner/77757278/statistic/v2?date_from=2017-06-24&date_to=2017-06-30&date_type=day", "count": 1, "count_perc": 0.033, "time_sum": 0.144, "time_perc": 0.014, "time_avg": 0.144, "time_max": 0.144, "time_med": 0.144}, {"url": "/api/1/campaigns/?id=7843133", "count": 1, "count_perc": 0.033, "time_sum": 0.138, "time_perc": 0.013, "time_avg": 0.138, "time_max": 0.138, "time_med": 0.138}, {"url": "/api/v2/banner/5789754", "count": 1, "count_perc": 0.033, "time_sum": 0.136, "time_perc": 0.013, "time_avg": 0.136, "time_max": 0.136, "time_med": 0.136}, {"url": "/api/1/photogenic_banners/list/?server_name=WIN7RB1", "count": 1, "count_perc": 0.033, "time_sum": 0.134, "time_perc": 0.013, "time_avg": 0.134, "time_max": 0.134, "time_med": 0.134}, {"url": "/api/v2/internal/revenue_share/service/276/partner/76358044/statistic/v2?date_from=2017-06-24&date_to=2017-06-30&date_type=day", "count": 1, "count_perc": 0.033, "time_sum": 0.133, "time_perc": 0.013, "time_avg": 0.133, "time_max": 0.133, "time_med": 0.133}, {"url": "/sites/", "count": 1, "count_perc": 0.033, "time_sum": 0.129, "time_perc": 0.013, "time_avg": 0.129, "time_max": 0.129, "time_med": 0.129}, {"url": "/api/1/photogenic_banners/list/?server_name=WIN7RB2", "count": 1, "count_perc": 0.033, "time_sum": 0.123, "time_perc": 0.012, "time_avg": 0.123, "time_max": 0.123, "time_med": 0.123}, {"url": "/api/v2/banner/22217377/statistic/?date_from=2017-06-30&date_to=2017-06-30", "count": 2, "count_perc": 0.067, "time_sum": 0.225, "time_perc": 0.022, "time_avg": 0.113, "time_max": 0.134, "time_med": 0.1125}, {"url": "/api/v2/banner/17572305/statistic/?date_from=2017-06-30&date_to=2017-06-30", "count": 1, "count_perc": 0.033, "time_sum": 0.083, "time_perc": 0.008, "time_avg": 0.083, "time_max": 0.083, "time_med": 0.083}, {"url": "/api/v2/banner/25020518/statistic/?date_from=2016-10-20&date_to=2017-06-30", "count": 1, "count_perc": 0.033, "time_sum": 0.077, "time_perc": 0.007, "time_avg": 0.077, "time_max": 0.077, "time_med": 0.077}, {"url": "/api/v2/banner/25020502/statistic/?date_from=2016-10-20&date_to=2017-06-30", "count": 1, "count_perc": 0.033, "time_sum": 0.059, "time_perc": 0.006, "time_avg": 0.059, "time_max": 0.059, "time_med": 0.059}, {"url": "/api/v2/banner/25187824/statistic/?date_from=2016-10-20&date_to=2017-06-30", "count": 1, "count_perc": 0.033, "time_sum": 0.059, "time_perc": 0.006, "time_avg": 0.059, "time_max": 0.059, "time_med": 0.059}, {"url": "/api/v2/internal/banner/24442444/info", "count": 1, "count_perc": 0.033, "time_sum": 0.057, "time_perc": 0.006, "time_avg": 0.057, "time_max": 0.057, "time_med": 0.057}, {"url": "/api/v2/banner/25020539/statistic/?date_from=2016-10-20&date_to=2017-06-30", "count": 1, "count_perc": 0.033, "time_sum": 0.054, "time_perc": 0.005, "time_avg": 0.054, "time_max": 0.054, "time_med": 0.054}, {"url": "/export/appinstall_raw/2017-06-30/", "count": 3, "count_perc": 0.1, "time_sum": 0.007, "time_perc": 0.001, "time_avg": 0.002, "time_max": 0.003, "time_med": 0.002}, {"url": "/export/appinstall_raw/2017-07-01/", "count": 3, "count_perc": 0.1, "time_sum": 0.003, "time_perc": 0.0, "time_avg": 0.001, "time_max": 0.001, "time_med": 0.001}];
+    var reportDates;
+    var columns = new Array();
+    var lastRow = 150;
+    var $table = $(".report-table-body");
+    var $header = $(".report-table-header-row");
+    var $selector = $(".report-date-selector");
+
+    $(document).ready(function() {
+      $(window).bind("scroll", bindScroll);
+        var row = table[0];
+        for (k in row) {
+          columns.push(k);
+        }
+        columns = columns.sort();
+        columns = columns.slice(columns.length -1, columns.length).concat(columns.slice(0, columns.length -1));
+        drawColumns();
+        drawRows(table.slice(0, lastRow));
+        $(".report-table").tablesorter(); 
+    });
+
+    function drawColumns() {
+      for (var i = 0; i < columns.length; i++) {
+        var $th = $("<th></th>").text(columns[i])
+                                .addClass("report-table-header-cell")
+        $header.append($th);
+      }
+    }
+
+    function drawRows(rows) {
+      for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var $row = $("<tr></tr>").addClass("report-table-body-row");
+        for (var j = 0; j < columns.length; j++) {
+          var columnName = columns[j];
+          var $cell = $("<td></td>").addClass("report-table-body-cell");
+          if (columnName == "url") {
+            var url = "https://rb.mail.ru" + row[columnName];
+            var $link = $("<a></a>").attr("href", url)
+                                    .attr("title", url)
+                                    .attr("target", "_blank")
+                                    .addClass("clipped")
+                                    .addClass("url")
+                                    .text(row[columnName]);
+            $cell.addClass("report-table-body-cell-url");
+            $cell.append($link);
+          }
+          else {
+            $cell.text(row[columnName]);
+            if (columnName == "time_avg" && row[columnName] > 0.9) {
+              $cell.addClass("alert");
+            }
+          }
+          $row.append($cell);
+        }
+        $table.append($row);
+      }
+      $(".report-table").trigger("update"); 
+    }
+
+    function bindScroll() {
+      if($(window).scrollTop() == $(document).height() - $(window).height()) {
+        if (lastRow < 1000) {
+          drawRows(table.slice(lastRow, lastRow + 50));
+          lastRow += 50;
+        }
+      }
+    }
+
+  }(window.jQuery)
+  </script>
+</body>
+</html>
